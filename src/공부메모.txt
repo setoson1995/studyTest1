@@ -1,0 +1,23 @@
+src > java 폴더가 파란색으로 변해야지 해당 폴더안에 java확장자나 다른 소스들이 제대로 동작할 수 있다.
+해당 폴더 오른쪽 마우스 > Mark Directory as > Sources 를 하면 변경시킬 수 있다.
+
+------------------------------|------------------------------
+
+A problem occurred configuring root project 'studyTest1'.
+> Could not resolve all files for configuration ':classpath'.
+   > Could not resolve org.springframework.boot:spring-boot-gradle-plugin:3.0.4.
+
+라는 에러를 만났는데, 검색해보니 해당오류는 ide 실행시 작동하는 gradle 버전이 낮아서 발생하는 문제라고한다.
+해결방법은 Settings > Build, Execution, Deployment > Build Tools > Gradle 에서 Gradle projects 부분에
+Build and run 안에 Build and run using 과 Run tests using 을 intelliJ IDEA 로 바꿔주면 해결된다.
+
+------------------------------|------------------------------
+스프링부트3.x 는 자바17부터, 스프링부트 2.x는 자바11을 이용해야한단다.
+지금 프로젝트는,
+Spring Boot : version '2.7.9'
+JAVA : version '11'
+로 생성되었다.
+
+------------------------------|------------------------------
+
+http://localhost:8080/hello
